@@ -12,7 +12,7 @@ export function Services() {
     <section id="services" className="relative bg-surface py-28 md:py-40">
       <div className="mx-auto max-w-[1400px] px-5 md:px-10">
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
-          <SectionHeading eyebrow="What We Do" title="Services, shaped\naround your roof." />
+          <SectionHeading eyebrow="What We Do" title={"Services, shaped\naround your roof."} />
           <motion.p
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
