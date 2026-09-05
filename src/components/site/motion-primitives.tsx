@@ -145,7 +145,7 @@ export function ParallaxMedia({
     <div ref={ref} className={cn("relative overflow-hidden", className)}>
       <motion.div
         className="absolute inset-[-12%]"
-        style={reduced ? undefined : { y, scale }}
+        {...(reduced ? {} : { style: { y, scale } })}
       >
         {videoSrc ? (
           <video

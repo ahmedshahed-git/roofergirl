@@ -12,7 +12,7 @@ export function Testimonials() {
     return () => clearInterval(t);
   }, []);
 
-  const t = testimonials[i];
+  const t = testimonials[i] ?? testimonials[0]!;
 
   return (
     <section className="relative overflow-hidden border-y border-hairline bg-surface py-28 md:py-40">
