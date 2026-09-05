@@ -21,7 +21,7 @@ export function Hero() {
   return (
     <section ref={ref} className="relative h-[100svh] w-full overflow-hidden grain">
       {/* Background layer — video-ready */}
-      <motion.div className="absolute inset-0" style={reduced ? undefined : { y }}>
+      <motion.div className="absolute inset-0" {...(reduced ? {} : { style: { y } })}>
         <motion.div
           className="absolute inset-[-8%]"
           initial={{ scale: 1.25 }}
@@ -30,7 +30,7 @@ export function Hero() {
         >
           <motion.div
             className="h-full w-full"
-            animate={reduced ? undefined : { x: [0, -18, 6, 0], y: [0, 8, -10, 0] }}
+            {...(reduced ? {} : { animate: { x: [0, -18, 6, 0], y: [0, 8, -10, 0] } })}
             transition={{ duration: 38, repeat: Infinity, ease: "easeInOut" }}
           >
             {HERO_VIDEO_SRC ? (
@@ -67,7 +67,7 @@ export function Hero() {
 
       {/* Content */}
       <motion.div
-        style={reduced ? undefined : { y: contentY, opacity: contentOpacity }}
+        {...(reduced ? {} : { style: { y: contentY, opacity: contentOpacity } })}
         className="relative z-10 mx-auto flex h-full max-w-[1400px] flex-col justify-end px-5 pb-20 md:px-10 md:pb-28"
       >
         <motion.span
